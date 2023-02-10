@@ -1,7 +1,33 @@
 <%- include("header") -%>
 
-<h2 class="h2 big-heading mb-3"><%= pokemonName %></h2>
-<p><%= pokemonPrimaryType %></p>
-<p><%= pokemonSecondaryType %></p>
+    <!-- <h2 class="h2 big-heading mb-3"><%= pokemonName %></h2><p><%= pokemonPrimaryType %></p><p><%= pokemonSecondaryType %></p> -->
+    <div class="container-fluid pokedex-container">
 
-<%- include("footer") -%>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="">Back</a>
+        </nav>
+        <div class="row">
+            <div class="image-container col-lg-6">
+                <img src="/images/3.png" alt="Image of the searched pokemon" class="pokemon-image">
+            </div>
+            <div class="col-lg-6 dex-entry">
+                <div class="dex-data">
+                    <h2>Venusaur</h2>
+                    <p>
+                        <b>Species:</b> The Seed Pokemon <br>
+                        <b>Primary Type:</b> Grass <br>
+                        <b>Secondary Type:</b> Poison <br>
+                        <b>Average Height:</b> 6'07 <br>
+                        <b>Average Weight:</b> 220.5 Ibs <br>
+                        <b>Description:</b> As it warms itself and absorbs the sunlight, its flower petals release a
+                        pleasant fragrance.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <%- include("footer") -%>

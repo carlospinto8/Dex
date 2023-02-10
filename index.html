@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
 
+ 
+
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,35 +24,25 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 
 <body>
+    <main class="form-signin w-100 m-auto" id="title">
 
-    <section id="title">
-        <div class="container-fluid">
-            <navbar class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="">LosDex</a>
-            </navbar>
 
-            <div class="row">
-                <div class=col-lg-6>
-                    <h1 class="big-heading">Search for a Pokemon by name</h1>
-                    <form action="/" method="post">
-
-                        <div class="form-floating rounded-corner">
-                            <input type="text" name="pokemonName" placeholder="Pokemon Name" required autofocus>
-                        </div>
-                        <button class="w-100 btn btn-lg btn-primary" type="submit">Search</button>
-                    </form>
-                </div>
-
-                <div class=col-lg-6>
-                    <img class="title-image" src="images/pokeball.png" alt="pokeball logo">
-                </div>
+        <form action="/" method="post">
+            <h1 class="h2 big-heading mb-3">Search for Pokemon</h1>
+            <div class="form-floating mb-3 rounded-corner">
+                <input type="text" class="form-control" name="pokemonName" placeholder="Pokemon Name or Dex Number"
+                    required autofocus>
             </div>
-        </div>
-    </section>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Search</button>
+        </form>
+
+
+
+    </main>
 
 </body>
 

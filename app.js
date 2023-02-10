@@ -4,7 +4,7 @@ const axios = require("axios").default;
 
 const app = express();
 
-const url = "https://pokeapi.co/api/v2/pokemon/";
+const url = "https://pokeapi.glitch.me/v1/pokemon/" //"https://pokeapi.co/api/v2/pokemon/";
 const pokemon = [];
 
 app.set("view engine", "ejs");
@@ -34,16 +34,21 @@ app.post("/", function (req, res) {
 
             // res.data will store all the data you got in response. duh.
             pokemon.push(res.data.name);
-            pokemon.push(res.data.sprites.front_default);
-            pokemon.push(res.data.types[0].type.name);
+            pokemon.push(res.data.sprite);
+            
+            pokemon.push(res.data.species);
+            pokemon.push(res.data.height);
+            pokemon.push(res.data.weight);
+            pokemon.push(res.data.description)
+            pokemon.push(res.data.types[0]); //Threw an error don't forget to check this
 
             if (res.data.types.length === 2) {
-                 pokemon.push(res.data.types[1].type.name);
+                 pokemon.push(res.data.types[1]);
             } else {
                 pokemon.push("none");
             }
 
-            console.log(pokemon[0] + " " + pokemon[2] + " " + pokemon[3]);
+            //console.log(pokemon[0] + " " + pokemon[2] + " " + pokemon[3]);
 
         })
         .catch(function (error) {
@@ -58,7 +63,16 @@ app.post("/", function (req, res) {
 });
 
 app.get("/pokemon", function(req, res) {
-    res.render("pokemon", { pokemonName: pokemon[0], pokemonPrimaryType: pokemon[2], pokemonSecondaryType: pokemon[3]});
+    res.render("pokemon", { 
+        pokemonName: pokemon[0], 
+        pokemonPrimaryType: pokemon[6], 
+        pokemonSecondaryType: pokemon[7],
+        pokemonImage: pokemon[1],
+        pokemonSpecies: pokemon[2],
+        pokemonHeight: pokemon[3],
+        pokemonWeight: pokemon[4],
+        pokemonDescription: pokemon[5]
+    });
 });
 
 app.listen(3000, function () {

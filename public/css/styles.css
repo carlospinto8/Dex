@@ -1,0 +1,111 @@
+
+
+body {
+    display: flex;
+    align-items: center;
+    
+    font-family: "Montserrat";
+    text-align:center;
+    background-color: #1a1d21;
+}
+
+h1, h2, h3 {
+    font-family: "Montserrat";
+    font-weight: bold;
+    color: white;
+}
+
+.search-button {
+    background-color: #461412;
+    color: white;
+}
+
+.search-button:hover {
+    background-color: #6a1b1b;
+    color: white;
+}
+
+.navbar {
+    padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Headings */
+
+.big-heading {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.5;
+}
+
+.form-signin {
+    max-width: 500px;
+    padding: 15px;
+    border-radius: 0;
+  }
+  
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  /* pokedex entry page css */
+
+  .pokedex-container {
+      margin: 20px;
+  }
+
+  .image-container {
+      padding: 0;
+  }
+
+  .pokemon-image {
+    background-color: #222529;
+    border-radius: 50%;
+    padding: 15px;
+    width: 70%;
+  }
+
+
+
+
+
+  .dex-entry {
+      color: white;
+      text-align: left;
+      line-height: 2;
+      padding: 45px 5px;
+      place-items: center;
+   
+  }
+
+  .dex-data {
+    background-color: #222529;
+    border-radius: 3%;
+    padding: 35px;
+    place-items: center;
+  }
+
+  @media only screen and (min-width: 1200px) {
+
+    .dex-entry {
+        padding: 45px 40px 45px 5px;
+    }
+    .dex-data {
+        padding: 80px 60px 70px;
+    }
+}
+
+  @media only screen and (min-width: 992px) {
+
+    .dex-entry {
+        padding: 45px 40px 45px 5px;
+    }
+    .dex-data {
+        padding: 30px 60px;
+    }
+}
