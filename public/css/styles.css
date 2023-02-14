@@ -53,6 +53,8 @@ h1, h2, h3 {
     z-index: 2;
   }
 
+  
+
   .search {
      height: 700px;
   }
@@ -116,4 +118,14 @@ h1, h2, h3 {
     .dex-data {
         padding: 30px 60px;
     }
+}
+
+footer {
+    color: white;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 30px;
+    width: 100%;
+    
 }
