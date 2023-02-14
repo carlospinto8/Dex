@@ -52,6 +52,16 @@ h1, h2, h3 {
   .form-signin .form-floating:focus-within {
     z-index: 2;
   }
+
+  .search {
+     height: 700px;
+  }
+
+  @media only screen and (min-width: 500px) {
+    .search {
+        height: 500px;
+     }
+  }
   
   /* pokedex entry page css */
 
@@ -71,9 +81,6 @@ h1, h2, h3 {
   }
 
 
-
-
-
   .dex-entry {
       color: white;
       text-align: left;
@@ -86,6 +93,7 @@ h1, h2, h3 {
   .dex-data {
     background-color: #222529;
     border-radius: 3%;
+    font-size: .9rem;
     padding: 35px;
     place-items: center;
   }

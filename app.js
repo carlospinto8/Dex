@@ -31,24 +31,26 @@ app.post("/", function (req, res) {
         .then(function (res) {
             // Handle success
             console.log(res);
-
+            console.log(typeof res.data);
+            console.log(res.data[0]);
+            console.log(res.data[0].types);
             // res.data will store all the data you got in response. duh.
-            pokemon.push(res.data.name);
-            pokemon.push(res.data.sprite);
+            pokemon.push(res.data[0].name);
+            pokemon.push(res.data[0].sprite);
             
-            pokemon.push(res.data.species);
-            pokemon.push(res.data.height);
-            pokemon.push(res.data.weight);
-            pokemon.push(res.data.description)
-            pokemon.push(res.data.types[0]); //Threw an error don't forget to check this
+            pokemon.push(res.data[0].species);
+            pokemon.push(res.data[0].height);
+            pokemon.push(res.data[0].weight);
+            pokemon.push(res.data[0].description)
+            pokemon.push(res.data[0].types[0]); //Threw an error don't forget to check this
 
-            if (res.data.types.length === 2) {
+            if (res.data[0].types.length === 2) {
                  pokemon.push(res.data.types[1]);
             } else {
-                pokemon.push("none");
+                pokemon.push("None");
             }
 
-            //console.log(pokemon[0] + " " + pokemon[2] + " " + pokemon[3]);
+            console.log(pokemon[1]);
 
         })
         .catch(function (error) {
